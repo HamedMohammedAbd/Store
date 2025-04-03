@@ -20,3 +20,7 @@ Route::patch('categories/update/{id}', [CategoryController::class, 'update']);
 Route::get('categories/delete/{id}', [CategoryController::class, 'destroy']);
 
 Route::get('/', [FrontController::class, 'index']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
